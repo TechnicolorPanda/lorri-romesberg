@@ -1,21 +1,30 @@
-import React, { useEffect } from 'react';
-import './App.css';
+import React from 'react';
+import Nav from './components/Nav';
+import Home from './components/Home';
+import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import './styles/App.css';
+import { HashRouter, Route } from 'react-router-dom';
 
 function App() {
 
-  useEffect(() => {
-    document.getElementById('first-name').style.marginLeft = '10%';
-    document.getElementById('last-name').style.marginLeft = '10%';
-  },[]);
-
   return (
+    <HashRouter>
       <div className = 'App'>
-        <h1>
-          <div id = 'first-name'>Lorri </div>
-          <div id = 'last-name'>Romesberg</div>
-        </h1>
-        <h3>full stack web developer</h3>
+        <div className = 'navbar'>
+          <Nav/>
+        </div>
+        <div className = 'content'>
+            <Route exact path = '/' component = {Home} />
+            <Route exact path = '/about' component = {About}/>
+            <Route path = '/skills' component = {Skills}/>
+            <Route path = '/projects' exact component = {Projects}/>
+            <Route path = '/contact' component = {Contact}/>
+        </div>
       </div>
+    </HashRouter>
   );
 }
 

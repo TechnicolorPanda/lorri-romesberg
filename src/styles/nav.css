@@ -1,0 +1,37 @@
+
+  ul.nav-links {
+    background-color: #c9d9c2;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    margin-top: 0px;
+    list-style-type: none;
+    padding-inline-start: 0px;
+  } 
+  
+
+  li {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    position: relative;
+    display: block;
+    float: right;
+    padding: .5em;
+    margin-top: 1em;
+    text-align: center;
+    text-decoration: none; 
+  }
+   
+  li:hover {
+    color: #1b494b;
+  }
+
+  li.contact {
+    padding-right: 1em;
+  }
+
+
+
+
+
