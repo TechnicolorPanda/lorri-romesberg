@@ -1,5 +1,26 @@
-.App {
-  text-align: center;
+body {
+  background-color: #c9d9c2;
+}
+
+h1 {
+  font-family: "Volkhov",serif;
+  color: #1b494b;
+  text-align: left;
+  font-size: 5em;
+  margin-left: 10%;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+p {
+  margin: 0;
+}
+
+h3 {
+  color: white;
+  text-align: left;
+  margin-left: 10%;
+  font-size: 1.7em;
 }
 
 .App-header {
@@ -10,7 +31,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #c9d9c2;
 }
 
 .App-link {
