@@ -10,7 +10,7 @@
   } 
   
 
-  li {
+  li.about, li.home, li.skills, li.projects, li.contact {
     color: white;
     font-size: 1.5em;
     font-weight: bold;
