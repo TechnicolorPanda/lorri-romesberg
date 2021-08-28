@@ -5,8 +5,11 @@ import '../styles/App.css';
 const Skills = () => {
 
   return (
-    <div>
-      <h1>Skills</h1>
+    <div id = 'skills-info'>
+      <h2>Skills</h2>
+      <h3>front-end</h3>
+      <h3>back-end</h3>
+      <h3>other</h3>
     </div>
   );
 }

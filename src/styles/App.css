@@ -67,12 +67,20 @@ li.about-list {
   list-style-type: circle;
 }
 
-#about-info {
+#about-info, #skills-info {
   margin-left: 10%;
   margin-right: 10%;
 }
 
 #about-paragraph {
   margin-top: 1em;
+}
+
+img {
+  float: left;
+  width:  100px;
+  height: 100px;
+  background-size: cover;
+  background: transparent;
 }
 
