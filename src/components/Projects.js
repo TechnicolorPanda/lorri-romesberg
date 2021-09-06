@@ -8,14 +8,14 @@ const Projects = () => {
     name: '', 
     images: '', 
     description: '',
-    url: '',
+    githubURL: '',
+    liveDemo: '',
   });
 
-  console.log(projectList.item[0]);
+  const project = projectList;
 
   useEffect(() => {
-
-    setItemDetails(projectList.item[0]);
+    setItemDetails(project.item[2]);
   },[])
 
   console.log(itemDetails.images);
@@ -23,8 +23,12 @@ const Projects = () => {
   return (
     <div>
       <h2>Projects</h2>
-      <img src={itemDetails.images} alt={itemDetails.description}></img>
-      <a href={itemDetails.url}>{itemDetails.name}</a>
+      <div>
+        <img src={itemDetails.images} alt={itemDetails.description}></img>
+        <p>{itemDetails.name}</p>
+        <p><a href={itemDetails.githubURL}>Project Code</a></p>
+        <p><a href={itemDetails.liveDemo}>Live Demo</a></p>
+      </div>
     </div>
   );
 }
