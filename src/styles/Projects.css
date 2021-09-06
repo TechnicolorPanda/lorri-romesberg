@@ -1,0 +1,100 @@
+
+h2 {
+    font-family: "Volkhov",serif;
+    color: #1b494b;
+    text-align: left;
+    font-size: 3em;
+    margin-top: 2em;
+  }
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.slide {
+    max-width: 1000px;
+    position: relative;
+    margin-left: 33%;
+    margin-right: 33%;
+    display: block;
+    width: 34%;
+    height: 15rem;
+    text-align: center;
+    align-items: center;
+    border: 3px black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    top: 2rem;
+}
+
+/* Creates advancement arrows. */
+
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    margin-right: 20%;
+  }
+
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+    margin-left: 20%;
+  }
+
+  /* On hover, add a black background color with a little bit see-through. */
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.185);
+  }
+
+  .content {
+    margin-left: 10%;
+    margin-right:10%;
+    width: 80%;
+    align-items: center;
+    font-size: 16px;
+    color: black;
+    padding: 10px;
+    position: auto;
+    justify-content: space-evenly;
+    border: 10px;
+    border-radius: 1%;
+    display: block;
+  }
+
+  box {
+      position: absolute;
+      top: 80%;
+      margin-left: 42%;
+      align-items: center;
+      display: block;
+}

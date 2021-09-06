@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/App.css';
+import '../styles/Projects.css';
 import projectList from './projectList';
 
 const Projects = () => {
@@ -23,7 +23,7 @@ const Projects = () => {
   return (
     <div>
       <h2>Projects</h2>
-      <div>
+      <div className = 'slide'>
         <img src={itemDetails.images} alt={itemDetails.description}></img>
         <p>{itemDetails.name}</p>
         <p><a href={itemDetails.githubURL}>Project Code</a></p>
