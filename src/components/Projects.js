@@ -101,10 +101,6 @@ function subtractImage(imageNumber) {
 // repeat images from the beginning
 // TODO: put 5 second timeout between image 5 and image 1
 
-function startOver(contentSection) {
-  rotateImages(contentSection);
-}
-
   function rotateImages() {
     console.log('rotate images');
     console.log(projects.project.length);
@@ -121,32 +117,26 @@ function startOver(contentSection) {
 
   useEffect(() => {
     let i = 0;
-      setTimeout(() => {
-      if (i < projects.project.length-1) {
-        setProjectNumber(i);
-        i++;
-        console.log(i);
-      } else {
-        i = i - projects.project.length - 1;
-        console.log(i);
+    setProjectDetails(projects.project[i]);
+    const timer = setInterval(() => {
+      i++;
+      setProjectDetails(projects.project[i]);
+      if (i >= projects.project.length - 1) {
+        i = i - projects.project.length;
       }
-    }, 1000);
-    // return () => clearTimeout(timer);
-  },[])
-
-  console.log(projects.project[0].value);
+    }, 4000);
+    return () => clearInterval(timer);
+    },[])
 
   return (
     <div>
       <h2>Projects</h2>
-      {projects.project.map((project => ( 
-        <div className = 'slide' key = {project.id}>
-          <img src={project.images} alt={project.description}></img>
-          <p>{project.name}</p>
-          <p><a href={project.githubURL}>Project Code</a></p>
-          <p><a href={project.liveDemo}>Live Demo</a></p>
+        <div className = 'slide' key = {projectDetails.id}>
+          <img src={projectDetails.images} alt={projectDetails.description}></img>
+          <p>{projectDetails.name}</p>
+          <p><a href={projectDetails.githubURL}>Project Code</a></p>
+          <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
         </div>
-      )))}
   </div>
   );
 }
