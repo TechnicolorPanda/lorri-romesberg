@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Projects.css';
-import projectList from './projectList';
+import projectInfo from './projectInfo';
 
 const Projects = () => {
 
+  // Defines states.
   const [projectDetails, setProjectDetails] = useState({
     name: '', 
     images: '', 
@@ -12,17 +13,19 @@ const Projects = () => {
     liveDemo: '',
     id: '',
   });
-  const [projectNumber, setProjectNumber] = useState(0);
+  const [dotArray, setDotArray] = useState([]);
+  const [currentDot, setCurrentDot] = useState(0);
 
-  const projects = projectList;
+  // Defines constants.
+  const numberOfProjects = projectInfo.project.length;
 
   // display selected image and hide others
 
-function slideImages(contentSection, imageNumber) {
-  const displaySlide = document.getElementsByClassName('slide');
-  // const highlightDot = document.getElementsByClassName('dot');
+  function slideImages(contentSection, imageNumber) {
+    const displaySlide = document.getElementsByClassName('slide');
+    // const highlightDot = document.getElementsByClassName('dot');
 
-  for (let i = 0; i < displaySlide.length; i++) {
+    for (let i = 0; i < displaySlide.length; i++) {
     if (imageNumber === i) {
       displaySlide[i].style.display = 'block';
       // highlightDot[i].style.backgroundColor = '#717171';
@@ -83,46 +86,54 @@ function subtractImage(imageNumber) {
 
 // create dot to specify displayed picture
 
-// function createDots(contentSection) {
-//   const displaySlide = document.getElementsByClassName('slide');
-//   const dotContainer = document.createElement('box');
-//   for (let i = 0; i < displaySlide.length; i++) {
-//     const imageDot = document.createElement('span');
-//     imageDot.classList.add('dot');
-
-//     imageDot.addEventListener('click', () => {
-//       slideImages(contentSection, i);
-//     });
-//     dotContainer.appendChild(imageDot);
-//     contentSection.appendChild(dotContainer);
-//   }
-// }
-
-// repeat images from the beginning
-// TODO: put 5 second timeout between image 5 and image 1
-
-  function rotateImages() {
-    console.log('rotate images');
-    console.log(projects.project.length);
-    for (let i = 0; i < projects.project.length; i++) {
-      setTimeout(() => {
-        console.log(i);
-        setProjectDetails(projects.project[i])
-        // if (i === projects.length - 1) {
-        //   setTimeout(startOver(contentSection), 5000);
-      }, 5000)
+useEffect(() => {
+  let newDotArray = [];
+  for (let i = 0; i < numberOfProjects; i++) {
+    console.log(currentDot);
+    if (currentDot === i) {
+      newDotArray = newDotArray.concat('true');
+    } else {
+      newDotArray = newDotArray.concat('false');
     }
-  }
-      
+  };
+  setDotArray(newDotArray);
+}, [currentDot])
 
+// TODO: eliminate currentDot #3
+
+const rotateDotNumber = () => {
+  if (currentDot < numberOfProjects) {
+    return(currentDot + 1);
+  } else {
+    return(currentDot - numberOfProjects);
+  }
+}
+
+const fillDotArray = () => {
+  console.log('current dot # ' + rotateDotNumber(currentDot));
+  setCurrentDot(rotateDotNumber(currentDot));
+}
+
+  // Places dots under rotating images.
+  useEffect(() => {
+    fillDotArray();
+  }, [projectDetails])
+
+  console.log('Dot array = ' + dotArray);
+     
+  // Rotates pictures every 4 seconds.
   useEffect(() => {
     let i = 0;
-    setProjectDetails(projects.project[i]);
+    setProjectDetails(projectInfo.project[i]);
+
+    // Changes image number at set interval.
     const timer = setInterval(() => {
       i++;
-      setProjectDetails(projects.project[i]);
-      if (i >= projects.project.length - 1) {
-        i = i - projects.project.length;
+      setProjectDetails(projectInfo.project[i]);
+
+      // Starts rotation of images from the beginning.
+      if (i >= numberOfProjects - 1) {
+        i = i - numberOfProjects;
       }
     }, 4000);
     return () => clearInterval(timer);
@@ -131,13 +142,20 @@ function subtractImage(imageNumber) {
   return (
     <div>
       <h2>Projects</h2>
-        <div className = 'slide' key = {projectDetails.id}>
-          <img src={projectDetails.images} alt={projectDetails.description}></img>
-          <p>{projectDetails.name}</p>
-          <p><a href={projectDetails.githubURL}>Project Code</a></p>
-          <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
-        </div>
-  </div>
+      <div className = 'slide' key = {projectDetails.id}>
+        <img className = 'projectImage' src={projectDetails.images} alt={projectDetails.description}></img>
+        <p>{projectDetails.name}</p>
+        <p><a href={projectDetails.githubURL}>Project Code</a></p>
+        <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
+        <p className = 'dot-row'>
+          {dotArray.map(dot => {
+            return (dot === 'true')? 
+              <span className = 'dot' id = 'orange-dot'></span>: 
+              <span className = 'dot' id = 'grey-dot'></span>
+          })}
+        </p>
+      </div>
+    </div>
   );
 }
 

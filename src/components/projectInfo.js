@@ -3,7 +3,7 @@ import battleship from '../assets/attack-page.png';
 import tictactoe from '../assets/tictactoe.png';
 import weather from '../assets/weather.png';
 
-const Projects = {
+const ProjectInfo = {
 
   project: [{
       name: 'Battleship', 
@@ -32,4 +32,4 @@ const Projects = {
   ]
 }
 
-  export default Projects;
+  export default ProjectInfo;
