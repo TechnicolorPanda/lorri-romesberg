@@ -107,10 +107,12 @@ useEffect(() => {
 
   // Sets current dot number
   const rotateDotNumber = () => {
-    if (currentDot < numberOfProjects) {
-      return(currentDot + 1);
+    if (currentDot+1 < numberOfProjects) {
+      return(currentDot+1);
     } else {
-      return(currentDot - numberOfProjects);
+      console.log('current dot' + currentDot);
+      console.log('number of projects' + numberOfProjects);
+      return(0);
     }
   }
 
@@ -156,13 +158,13 @@ useEffect(() => {
             return (dot === 'true')? 
               <span 
                 className = 'dot' 
-                style = {{backgroundColor:'orange'}}
+                style = {{backgroundColor:'rgb(252, 124, 78)'}}
                 id = {index} 
                 onClick = {handleDotClick}
               ></span>: 
               <span className = 'dot' 
-                id = {index}
                 style = {{backgroundColor:'darkgray'}}
+                id = {index}
                 onClick = {handleDotClick}
               ></span>
           })}
