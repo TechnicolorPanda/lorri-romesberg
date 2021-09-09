@@ -15,6 +15,7 @@ const Projects = () => {
   });
   const [dotArray, setDotArray] = useState([]);
   const [currentDot, setCurrentDot] = useState(0);
+  const [targetDot, setTargetDot] = useState('');
 
   // Defines constants.
   const numberOfProjects = projectInfo.project.length;
@@ -84,12 +85,15 @@ function subtractImage(imageNumber) {
 //   contentSection.appendChild(createNextArrow);
 // }
 
-// create dot to specify displayed picture
+const handleDotClick = (event) => {
+  event.preventDefault();  
+  setTargetDot(event.target.id);
+}
 
+// Create dot to specify displayed picture
 useEffect(() => {
   let newDotArray = [];
   for (let i = 0; i < numberOfProjects; i++) {
-    console.log(currentDot);
     if (currentDot === i) {
       newDotArray = newDotArray.concat('true');
     } else {
@@ -101,25 +105,25 @@ useEffect(() => {
 
 // TODO: eliminate currentDot #3
 
-const rotateDotNumber = () => {
-  if (currentDot < numberOfProjects) {
-    return(currentDot + 1);
-  } else {
-    return(currentDot - numberOfProjects);
+  // Sets current dot number
+  const rotateDotNumber = () => {
+    if (currentDot < numberOfProjects) {
+      return(currentDot + 1);
+    } else {
+      return(currentDot - numberOfProjects);
+    }
   }
-}
 
-const fillDotArray = () => {
-  console.log('current dot # ' + rotateDotNumber(currentDot));
-  setCurrentDot(rotateDotNumber(currentDot));
-}
+  // Sets the number of slide on dots
+
+  const fillDotArray = () => {
+    setCurrentDot(rotateDotNumber(currentDot));
+  }
 
   // Places dots under rotating images.
   useEffect(() => {
     fillDotArray();
   }, [projectDetails])
-
-  console.log('Dot array = ' + dotArray);
      
   // Rotates pictures every 4 seconds.
   useEffect(() => {
@@ -148,10 +152,19 @@ const fillDotArray = () => {
         <p><a href={projectDetails.githubURL}>Project Code</a></p>
         <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
         <p className = 'dot-row'>
-          {dotArray.map(dot => {
+          {dotArray.map((dot, index) => {
             return (dot === 'true')? 
-              <span className = 'dot' id = 'orange-dot'></span>: 
-              <span className = 'dot' id = 'grey-dot'></span>
+              <span 
+                className = 'dot' 
+                style = {{backgroundColor:'orange'}}
+                id = {index} 
+                onClick = {handleDotClick}
+              ></span>: 
+              <span className = 'dot' 
+                id = {index}
+                style = {{backgroundColor:'darkgray'}}
+                onClick = {handleDotClick}
+              ></span>
           })}
         </p>
       </div>
