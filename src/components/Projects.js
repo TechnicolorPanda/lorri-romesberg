@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import '../styles/Projects.css';
 import projectInfo from './projectInfo';
@@ -20,71 +21,43 @@ const Projects = () => {
   const numberOfProjects = projectInfo.project.length;
   const projectDisplayed = projectInfo.project;
 
-// determines next image number
+  // determines next image number
+  function addImage(imageNumber) {
+    return ((imageNumber + 1) % numberOfProjects);
+  }
 
-function addImage(imageNumber) {
-  return ((imageNumber + 1) % 5);
-}
+  // determines previous image number
+  function subtractImage(imageNumber) {
+    return ((imageNumber + (numberOfProjects - 1)) % numberOfProjects);
+  }
 
-// determines previous image number
+  // Moves image back one image
+  const moveBack = () => {
+    setImageNumber(subtractImage(imageNumber));
+  }
 
-function subtractImage(imageNumber) {
-  const displaySlide = document.getElementsByClassName('slide');
-  const newImageNumber = ((imageNumber + (displaySlide.length - 1)) % (displaySlide.length));
-  return (newImageNumber);
-}
+  // Moves image forward one image
+  const moveForward = () => {
+    setImageNumber(addImage(imageNumber));
+  }
 
-// create arrows to move forward or backward
+  // Sets image to selected number.
+  useEffect(() => {
+    setProjectDetails(projectDisplayed[imageNumber]);
+  },[imageNumber])
 
-// function createArrows(contentSection, imageNumber) {
-//   const createPreviousArrow = document.createElement('nav');
-
-//   // create previous arrow
-
-//   createPreviousArrow.classList.add('prev');
-//   createPreviousArrow.innerHTML = '&#10094';
-
-//   const subtractImageNumber = subtractImage(imageNumber);
-
-//   createPreviousArrow.addEventListener('click', () => {
-//     slideImages(contentSection, subtractImageNumber);
-//   });
-
-//   contentSection.appendChild(createPreviousArrow);
-
-//   // create next arrow
-
-//   const createNextArrow = document.createElement('nav');
-//   createNextArrow.classList.add('next');
-//   createNextArrow.innerHTML = '&#10095';
-
-//   const addImageNumber = addImage(imageNumber);
-
-//   createNextArrow.addEventListener('click', () => {
-//     slideImages(contentSection, addImageNumber);
-//   });
-
-//   contentSection.appendChild(createNextArrow);
-// }
-
-// Sets image to selected number.
-useEffect(() => {
-  setProjectDetails(projectDisplayed[imageNumber]);
-},[imageNumber])
-
-// Creates dot corresponding to displayed picture
-useEffect(() => {
-  let newDotArray = [];
-  for (let i = 0; i < numberOfProjects; i++) {
-    if (parseInt(imageNumber) === i) {
-      newDotArray = newDotArray.concat('true');
-    } else {
-      newDotArray = newDotArray.concat('false');
-    }
-  };
-  setDotArray(newDotArray);
-}, [imageNumber])
-
+  // Creates dot corresponding to displayed picture
+  useEffect(() => {
+    let newDotArray = [];
+    for (let i = 0; i < numberOfProjects; i++) {
+      if (parseInt(imageNumber) === i) {
+        newDotArray = newDotArray.concat('true');
+      } else {
+        newDotArray = newDotArray.concat('false');
+      }
+    };
+    setDotArray(newDotArray);
+  }, [imageNumber])
 
   // When dot is clicked, function sets corresponding image number.
   const handleDotClick = (event) => {
@@ -114,14 +87,12 @@ useEffect(() => {
     <div>
       <h2>Projects</h2>
       <div className = 'slide' key = {projectDetails.id}>
-        <p className = 'previous'>{String.fromCharCode(10094)}</p>
+        <p className = 'previous' onClick = {moveBack}>{String.fromCharCode(10094)}</p>
         <img className = 'projectImage' src={projectDetails.images} alt={projectDetails.description}></img>
-        <p className = 'next'>{String.fromCharCode(10095)}</p>
+        <p className = 'next' onClick = {moveForward}>{String.fromCharCode(10095)}</p>
         <p>{projectDetails.name}</p>
         <p><a href={projectDetails.githubURL}>Project Code</a></p>
         <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
-
-
 
         <p className = 'dot-row'>
           {dotArray.map((dot, index) => {
