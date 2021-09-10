@@ -14,11 +14,11 @@ const Projects = () => {
     id: '',
   });
   const [dotArray, setDotArray] = useState([]);
-  const [currentDot, setCurrentDot] = useState(0);
-  const [targetDot, setTargetDot] = useState('');
+  const [imageNumber, setImageNumber] = useState(0);
 
   // Defines constants.
   const numberOfProjects = projectInfo.project.length;
+  const projectDisplayed = projectInfo.project;
 
   // display selected image and hide others
 
@@ -85,61 +85,44 @@ function subtractImage(imageNumber) {
 //   contentSection.appendChild(createNextArrow);
 // }
 
-const handleDotClick = (event) => {
-  event.preventDefault();  
-  setTargetDot(event.target.id);
-}
+// Sets image to selected number.
+useEffect(() => {
+  setProjectDetails(projectDisplayed[imageNumber]);
+},[imageNumber])
 
-// Create dot to specify displayed picture
+// Creates dot corresponding to displayed picture
 useEffect(() => {
   let newDotArray = [];
   for (let i = 0; i < numberOfProjects; i++) {
-    if (currentDot === i) {
+    if (parseInt(imageNumber) === i) {
       newDotArray = newDotArray.concat('true');
     } else {
       newDotArray = newDotArray.concat('false');
     }
   };
   setDotArray(newDotArray);
-}, [currentDot])
+}, [imageNumber])
 
-// TODO: eliminate currentDot #3
 
-  // Sets current dot number
-  const rotateDotNumber = () => {
-    if (currentDot+1 < numberOfProjects) {
-      return(currentDot+1);
-    } else {
-      console.log('current dot' + currentDot);
-      console.log('number of projects' + numberOfProjects);
-      return(0);
-    }
+  // When dot is clicked, function sets corresponding image number.
+  const handleDotClick = (event) => {
+    event.preventDefault();  
+    setImageNumber(event.target.id);
   }
-
-  // Sets the number of slide on dots
-
-  const fillDotArray = () => {
-    setCurrentDot(rotateDotNumber(currentDot));
-  }
-
-  // Places dots under rotating images.
-  useEffect(() => {
-    fillDotArray();
-  }, [projectDetails])
-     
+  
   // Rotates pictures every 4 seconds.
   useEffect(() => {
-    let i = 0;
-    setProjectDetails(projectInfo.project[i]);
+    let i = imageNumber;
+    setImageNumber(i);
 
     // Changes image number at set interval.
     const timer = setInterval(() => {
       i++;
-      setProjectDetails(projectInfo.project[i]);
+      setImageNumber(i);
 
       // Starts rotation of images from the beginning.
       if (i >= numberOfProjects - 1) {
-        i = i - numberOfProjects;
+        i = (i - numberOfProjects);
       }
     }, 4000);
     return () => clearInterval(timer);
