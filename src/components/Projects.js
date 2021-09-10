@@ -20,24 +20,6 @@ const Projects = () => {
   const numberOfProjects = projectInfo.project.length;
   const projectDisplayed = projectInfo.project;
 
-  // display selected image and hide others
-
-  function slideImages(contentSection, imageNumber) {
-    const displaySlide = document.getElementsByClassName('slide');
-    // const highlightDot = document.getElementsByClassName('dot');
-
-    for (let i = 0; i < displaySlide.length; i++) {
-    if (imageNumber === i) {
-      displaySlide[i].style.display = 'block';
-      // highlightDot[i].style.backgroundColor = '#717171';
-      // createArrows(contentSection, imageNumber);
-    } else {
-      displaySlide[i].style.display = 'none';
-      // highlightDot[i].style.backgroundColor = '#bbb';
-    }
-  }
-}
-
 // determines next image number
 
 function addImage(imageNumber) {
@@ -115,27 +97,32 @@ useEffect(() => {
     let i = imageNumber;
     setImageNumber(i);
 
-    // Changes image number at set interval.
-    const timer = setInterval(() => {
-      i++;
-      setImageNumber(i);
+  // Changes image number at set interval.
+  const timer = setInterval(() => {
+    i++;
+    setImageNumber(i);
 
-      // Starts rotation of images from the beginning.
-      if (i >= numberOfProjects - 1) {
-        i = (i - numberOfProjects);
-      }
-    }, 4000);
-    return () => clearInterval(timer);
-    },[])
+    // Starts rotation of images from the beginning.
+    if (i >= numberOfProjects - 1) {
+      i = (i - numberOfProjects);
+    }
+  }, 4000);
+  return () => clearInterval(timer);
+  },[])
 
   return (
     <div>
       <h2>Projects</h2>
       <div className = 'slide' key = {projectDetails.id}>
+        <p className = 'previous'>{String.fromCharCode(10094)}</p>
         <img className = 'projectImage' src={projectDetails.images} alt={projectDetails.description}></img>
+        <p className = 'next'>{String.fromCharCode(10095)}</p>
         <p>{projectDetails.name}</p>
         <p><a href={projectDetails.githubURL}>Project Code</a></p>
         <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
+
+
+
         <p className = 'dot-row'>
           {dotArray.map((dot, index) => {
             return (dot === 'true')? 
