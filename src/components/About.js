@@ -12,6 +12,7 @@ const About = () => {
         <li className = 'about-list'>A lawyer for parents and children in child welfare cases,</li>
         <li className = 'about-list'>A guardian ad litem and court investigator in the juvenile courts,</li>
         <li className = 'about-list'>A mom,</li>
+        <li className = 'about-list'>A triathlete,</li>
         <li className = 'about-list'>A Girl Scout and Boy Scout adult leader,</li>
         <li className = 'about-list'>An Odyssey of the Mind coach,</li>
         <li className = 'about-list'>A knitwear designer,</li>
@@ -29,4 +30,4 @@ const About = () => {
   );
 }
 
-  export default About;
+export default About;

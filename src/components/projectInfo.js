@@ -5,6 +5,8 @@ import weather from '../assets/weather.png';
 
 const ProjectInfo = {
 
+  // TODO: make image sizes uniform
+
   project: [{
       name: 'Battleship', 
       images: battleship, 

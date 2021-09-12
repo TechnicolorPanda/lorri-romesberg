@@ -17,34 +17,8 @@ const Projects = () => {
   const [dotArray, setDotArray] = useState([]);
   const [imageNumber, setImageNumber] = useState(0);
 
-  // Defines constants.
   const numberOfProjects = projectInfo.project.length;
   const projectDisplayed = projectInfo.project;
-
-  // determines next image number
-  function addImage(imageNumber) {
-    return ((imageNumber + 1) % numberOfProjects);
-  }
-
-  // determines previous image number
-  function subtractImage(imageNumber) {
-    return ((imageNumber + (numberOfProjects - 1)) % numberOfProjects);
-  }
-
-  // Moves image back one image
-  const moveBack = () => {
-    setImageNumber(subtractImage(imageNumber));
-  }
-
-  // Moves image forward one image
-  const moveForward = () => {
-    setImageNumber(addImage(imageNumber));
-  }
-
-  // Sets image to selected number.
-  useEffect(() => {
-    setProjectDetails(projectDisplayed[imageNumber]);
-  },[imageNumber])
 
   // Creates dot corresponding to displayed picture
   useEffect(() => {
@@ -59,28 +33,52 @@ const Projects = () => {
     setDotArray(newDotArray);
   }, [imageNumber])
 
+  // Sets image to selected number.
+  useEffect(() => {
+    setProjectDetails(projectDisplayed[imageNumber]);
+  },[imageNumber])
+
+  function subtractImage(imageNumber) {
+    return ((imageNumber + (numberOfProjects - 1)) % numberOfProjects);
+  }
+
+  // Moves image back one image
+  const moveBack = () => {
+    setImageNumber(subtractImage(imageNumber));
+  }
+
+  function addImage(imageNumber) {
+    return ((imageNumber + 1) % numberOfProjects);
+  }
+
+  // Moves image forward one image
+  const moveForward = () => {
+    setImageNumber(addImage(imageNumber));
+  }
+
   // When dot is clicked, function sets corresponding image number.
   const handleDotClick = (event) => {
     event.preventDefault();  
     setImageNumber(event.target.id);
   }
   
+  // TODO: reset image in series upon dot or arrow click
   // Rotates pictures every 4 seconds.
   useEffect(() => {
     let i = imageNumber;
     setImageNumber(i);
 
-  // Changes image number at set interval.
-  const timer = setInterval(() => {
-    i++;
-    setImageNumber(i);
+    // Changes image number at set interval.
+    const timer = setInterval(() => {
+      i++;
+      setImageNumber(i);
 
-    // Starts rotation of images from the beginning.
-    if (i >= numberOfProjects - 1) {
-      i = (i - numberOfProjects);
-    }
-  }, 4000);
-  return () => clearInterval(timer);
+      // Starts rotation of images from the beginning.
+      if (i >= numberOfProjects - 1) {
+        i = (i - numberOfProjects);
+      }
+    }, 4000);
+    return () => clearInterval(timer);
   },[])
 
   return (

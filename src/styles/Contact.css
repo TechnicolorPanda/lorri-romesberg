@@ -1,0 +1,33 @@
+
+h2.contact-heading {
+  margin-bottom: 0em;
+}
+
+.verticalmenu {
+    padding: 0px;
+    margin: 0px;
+}
+
+.verticalmenu {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    list-style-position: inside;
+    display: block;
+    position: relative;
+    width: 25%; 
+    float: left;
+}
+
+.verticalmenu a { 
+       margin: 10px;
+       display: block;
+       text-align: left;
+       color: white;
+       text-decoration: none;
+} 
+
+.verticalmenu a:hover {
+  color: rgb(252, 124, 78);
+}
+
