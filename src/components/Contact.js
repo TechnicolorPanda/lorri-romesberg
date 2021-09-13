@@ -1,5 +1,7 @@
 import React from 'react';
 import '../styles/Contact.css';
+import github from '../assets/github.png';
+import linkedin from '../assets/linkedin-logo.png';
 
 const Contact = () => {
 
@@ -15,9 +17,17 @@ const Contact = () => {
       <h2 className = 'contact-heading'>Contact</h2>
       <div className = 'verticalmenu'>
         <h3>
-          <Mailto email = 'LorriAnn7@gmail.com' subject = 'Web Designer Profile Page'>LorriAnn7@gmail.com</Mailto>
-          <a href = 'https://github.com/TechnicolorPanda'>Github</a>
-          <a href = 'https://www.linkedin.com/in/lorri-romesberg-aa713319/'>LinkedIn</a>
+          <p className = 'center-black'>Email:
+            <Mailto email = 'LorriAnn7@gmail.com' subject = 'Web Designer Profile Page'>
+              LorriAnn7@gmail.com
+            </Mailto>
+          </p>
+          <a href = 'https://github.com/TechnicolorPanda'>
+            <img className = 'github' src = {github} alt = 'Github'></img>
+          </a>
+          <a href = 'https://www.linkedin.com/in/lorri-romesberg-aa713319/'>
+            <img className = 'linkedin' src = {linkedin} alt = 'Linked In'></img>
+          </a>
         </h3>
       </div>
     </div>

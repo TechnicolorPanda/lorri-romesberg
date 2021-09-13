@@ -1,11 +1,6 @@
 
 h2.contact-heading {
-  margin-bottom: 0em;
-}
-
-.verticalmenu {
-    padding: 0px;
-    margin: 0px;
+  margin-bottom: .5em;
 }
 
 .verticalmenu {
@@ -13,21 +8,55 @@ h2.contact-heading {
     margin: 0px;
     list-style: none;
     list-style-position: inside;
-    display: block;
+    display: inline-block;
     position: relative;
-    width: 25%; 
-    float: left;
+    width: 100%; 
+    background-color: white;
 }
 
 .verticalmenu a { 
-       margin: 10px;
-       display: block;
-       text-align: left;
-       color: white;
-       text-decoration: none;
+    margin: 10px;
+    display: inline;
+    color: black;
+    text-decoration: none;
 } 
 
 .verticalmenu a:hover {
   color: rgb(252, 124, 78);
 }
 
+.github {
+  width: 20%;
+  padding: 5%;
+  float: left;
+  margin-left: 10%;
+}
+
+.github:hover {
+  width: 25%;
+  padding: 3.5%;
+  background-color: rgb(252, 124, 78);
+}
+
+.linkedin {
+  padding-top: 31px;
+  width: auto;
+  height: 92px;
+  float: right;
+  margin-right: 20%;
+}
+
+.linkedin:hover {
+  height: 100px;
+  background-color: rgb(252, 124, 78);
+}
+
+.center-black {
+  color: black;
+  text-align: center;
+  margin-left: -5%;
+}
+
+.white-box {
+  background-color: white;
+}
