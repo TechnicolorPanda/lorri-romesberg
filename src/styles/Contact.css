@@ -41,13 +41,13 @@ h2.contact-heading {
 .linkedin {
   padding-top: 31px;
   width: auto;
-  height: 92px;
+  height: 162px;
   float: right;
-  margin-right: 20%;
+  margin-right: 25%;
 }
 
 .linkedin:hover {
-  height: 100px;
+  height: 168px;
   background-color: rgb(252, 124, 78);
 }
 
