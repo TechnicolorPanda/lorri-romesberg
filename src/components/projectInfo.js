@@ -2,6 +2,8 @@
 import battleship from '../assets/attack-page.png';
 import tictactoe from '../assets/tictactoe.png';
 import weather from '../assets/weather.png';
+import odinsOperations from '../assets/odinsOperations.png';
+import calculator from '../assets/calculator.png';
 
 const ProjectInfo = {
 
@@ -31,6 +33,22 @@ const ProjectInfo = {
       liveDemo: 'https://technicolorpanda.github.io/weather-app/',
       id: 9183,
     },
+    {
+      name: 'Odin\'s Operations',
+      images: odinsOperations,
+      description: 'Game Jam 2021 Team Entry',
+      githubURL: 'https://github.com/TechnicolorPanda/odins-operations',
+      liveDemo: 'https://technicolorpanda.github.io/odins-operations/',
+      id: 7683,
+    },
+    {
+      name: 'Calculator',
+      images: calculator,
+      description: 'A basic calculator',
+      githubURL: 'https://github.com/TechnicolorPanda/calculator',
+      liveDemo: 'https://technicolorpanda.github.io/calculator/',
+      id: 2345,
+    }
   ]
 }
 

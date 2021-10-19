@@ -42,7 +42,6 @@ const Projects = () => {
     return ((imageNumber + (numberOfProjects - 1)) % numberOfProjects);
   }
 
-  // Moves image back one image
   const moveBack = () => {
     setImageNumber(subtractImage(imageNumber));
   }
@@ -51,7 +50,6 @@ const Projects = () => {
     return ((imageNumber + 1) % numberOfProjects);
   }
 
-  // Moves image forward one image
   const moveForward = () => {
     setImageNumber(addImage(imageNumber));
   }
@@ -62,8 +60,7 @@ const Projects = () => {
     setImageNumber(event.target.id);
   }
   
-  // TODO: reset image in series upon dot or arrow click
-  // Rotates pictures every 4 seconds.
+  // Rotates pictures every 3 seconds.
   useEffect(() => {
     let i = imageNumber;
     setImageNumber(i);
@@ -77,12 +74,12 @@ const Projects = () => {
       if (i >= numberOfProjects - 1) {
         i = (i - numberOfProjects);
       }
-    }, 4000);
+    }, 3000);
     return () => clearInterval(timer);
   },[])
 
   return (
-    <div>
+    <div className = 'main-container'>
       <h2>Projects</h2>
       <div className = 'slide' key = {projectDetails.id}>
         <p className = 'previous' onClick = {moveBack}>{String.fromCharCode(10094)}</p>

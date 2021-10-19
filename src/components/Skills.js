@@ -23,6 +23,7 @@ const Skills = () => {
         </div>
       <h3>other</h3>
       <div>
+          <a href = 'https://ubuntu.com/'>Linux</a>
           <a href = 'https://git-scm.com/'>git</a>
           <a href = 'https://webpack.js.org/'>Webpack</a>
           <a href = 'https://github.com/'>Github</a>
