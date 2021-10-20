@@ -26,7 +26,7 @@ const About = () => {
         my projects to see what I have learned!
       </p>
       <p className = 'center-paragraph'>See my resume 
-        <Link to = '/about/resume' className = 'embedded'>here.</Link>
+        <Link to = '/about/resume' className = 'embedded'>HERE.</Link>
       </p>
     </div>
   );
