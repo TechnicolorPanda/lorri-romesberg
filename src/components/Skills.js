@@ -1,8 +1,11 @@
 
 import React from 'react';
 import '../styles/Skills.css';
+import skillList from './skillList';
 
 const Skills = () => {
+
+  console.log(skillList.item[0].images);
 
   return (
     <div id = 'skills-info'>

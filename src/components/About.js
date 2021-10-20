@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/App.css';
+import { Link } from 'react-router-dom';
 
 const About = () => {
 
@@ -21,10 +22,11 @@ const About = () => {
       <p id = 'about-paragraph'>
         At the current transition in my life, I pondered what career I wanted to pursue. 
         I decided to be brave and pursue my interest in coding. With the help of the community 
-        at&nbsp;&nbsp; 
-        <a href = 'https://www.theodinproject.com/'>The Odin Project</a>
-        , I was able to teach myself full stack web development. Check out 
+        at<a href = 'https://www.theodinproject.com/' className = 'embedded'>The Odin Project</a>, I was able to teach myself full stack web development. Check out 
         my projects to see what I have learned!
+      </p>
+      <p className = 'center-paragraph'>See my resume 
+        <Link to = '/about/resume' className = 'embedded'>here.</Link>
       </p>
     </div>
   );

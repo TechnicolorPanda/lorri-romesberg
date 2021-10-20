@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 
 
-const Skills = {
+const skillList = {
 
   item: [
     {name: 'CSS3', 
@@ -14,4 +14,4 @@ const Skills = {
   ]
 }
 
-  export default Skills;
+  export default skillList;

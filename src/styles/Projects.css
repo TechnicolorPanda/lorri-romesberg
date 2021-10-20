@@ -9,6 +9,9 @@ h2 {
 }
 
 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -20,16 +23,17 @@ img {
   margin-bottom: 12px;
 }
 
-.slide {
+.slide, .image-info {
     position: relative;
     margin-left: 30%;
     margin-right: 30%;
     display: block;
-    max-width: 40%;
-    height: auto;
     text-align: center;
     align-items: center;
     border: 3px black;
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
 }
 
 /* The dots/bullets/indicators */
@@ -38,7 +42,7 @@ img {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: darkgray;
+    background-color: rgb(201, 201, 201);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
@@ -50,7 +54,7 @@ img {
 }
 
 #grey-dot {
-  background-color: darkgrey;
+  background-color: rgb(201, 201, 201);
 }
 
 #orange-dot {
@@ -111,4 +115,8 @@ img {
       margin-left: 42%;
       align-items: center;
       display: block;
+}
+
+a.list-name {
+  display: block;
 }

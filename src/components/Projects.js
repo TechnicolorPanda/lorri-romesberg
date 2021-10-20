@@ -86,9 +86,10 @@ const Projects = () => {
         <img className = 'projectImage' src={projectDetails.images} alt={projectDetails.description}></img>
         <p className = 'next' onClick = {moveForward}>{String.fromCharCode(10095)}</p>
         <p>{projectDetails.name}</p>
-        <p><a href={projectDetails.githubURL}>Project Code</a></p>
-        <p><a href={projectDetails.liveDemo}>Live Demo</a></p>
-
+        <p><a href={projectDetails.githubURL} className = 'list-view'>Project Code</a></p>
+        <p><a href={projectDetails.liveDemo} className = 'list-view'>Live Demo</a></p>
+      </div>
+      <div className = 'image-info'>
         <p className = 'dot-row'>
           {dotArray.map((dot, index) => {
             return (dot === 'true')? 
@@ -99,7 +100,7 @@ const Projects = () => {
                 onClick = {handleDotClick}
               ></span>: 
               <span className = 'dot' 
-                style = {{backgroundColor:'darkgray'}}
+                style = {{backgroundColor:'rgb(201, 201, 201)'}}
                 id = {index}
                 onClick = {handleDotClick}
               ></span>
