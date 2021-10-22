@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/nav.css';
 import { Link } from 'react-router-dom';
+import profile from '../assets/profile.jpg';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Nav() {
@@ -8,6 +9,11 @@ function Nav() {
   return (
     <nav>
       <ul className = 'nav-links'>
+      <Link to = '/'>
+      <li>
+        <img className = 'profile' src = {profile} alt = 'profile'></img>
+      </li>
+      </Link>
       <Link to = '/contact'>
         <li className = 'contact'>Contact</li>
       </Link>
@@ -22,10 +28,6 @@ function Nav() {
 
       <Link to = '/about'>
         <li className = 'about'>About</li>
-      </Link>
-
-      <Link to = '/'>
-        <li className = 'home'>Home</li>
       </Link>
       </ul>
     </nav>
