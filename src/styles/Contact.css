@@ -11,7 +11,6 @@ h2.contact-heading {
     display: inline-block;
     position: relative;
     width: 100%; 
-    background-color: white;
 }
 
 .verticalmenu a { 
@@ -25,38 +24,44 @@ h2.contact-heading {
   color: rgb(252, 124, 78);
 }
 
-.github {
-  width: 20%;
+img.github {
+  width: 100%;
   padding: 5%;
+  height: auto;
   float: left;
   margin-left: 10%;
 }
 
 .github:hover {
-  width: 25%;
+  width: 105%;
   padding: 3.5%;
   background-color: rgb(252, 124, 78);
 }
 
 .linkedin {
-  padding-top: 31px;
-  width: auto;
-  height: 162px;
+  padding-top: 5%;
+  width: 40%;
+  height: auto;
   float: right;
   margin-right: 25%;
 }
 
 .linkedin:hover {
-  height: 168px;
+  width: 45%;
   background-color: rgb(252, 124, 78);
 }
 
-.center-black {
-  color: black;
+div.center-black {
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 20%;
+  align-items: center;
   text-align: center;
-  margin-left: -5%;
+  font-size: 16px;
+  color: black;
+  justify-content: space-evenly;
+  border: 10px;
+  border-radius: 1%;
+  display: block;
 }
 
-.white-box {
-  background-color: white;
-}

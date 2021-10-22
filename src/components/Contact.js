@@ -15,20 +15,26 @@ const Contact = () => {
   return (
     <div>
       <h2 className = 'contact-heading'>Contact</h2>
-      <div className = 'verticalmenu'>
-        <h3>
-          <p className = 'center-black'>Email:
+      <div className = 'center-black'>
+          <p>Email:
             <Mailto email = 'LorriAnn7@gmail.com' subject = 'Web Designer Profile Page'>
               LorriAnn7@gmail.com
             </Mailto>
           </p>
+      </div>
+      <div className = 'center-black'> 
+        <p>
           <a href = 'https://github.com/TechnicolorPanda'>
             <img className = 'github' src = {github} alt = 'Github'></img>
           </a>
+        </p>
+        <p>Github</p>
+        <p>
           <a href = 'https://www.linkedin.com/in/lorri-romesberg-aa713319/'>
             <img className = 'linkedin' src = {linkedin} alt = 'Linked In'></img>
           </a>
-        </h3>
+        </p>
+        <p>LinkedIn</p>
       </div>
     </div>
   );

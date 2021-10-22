@@ -6,7 +6,7 @@ const Resume = () => {
 
   return (
     <div id = 'about-info'>
-      <h3>LORRI ANN ROMESBERG, MSW, JD</h3>
+      <h3 className = 'center-heading'>LORRI ANN ROMESBERG, MSW, JD</h3>
       <p className = 'center-paragraph'>
         Attorney, social worker, and self-taught web developer. 
         With the assistance of The Odin Project, experience includes Javascript, HTML, CSS, React, NodeJS, and Express.
@@ -15,7 +15,7 @@ const Resume = () => {
       <h5>THE ODIN PROJECT, 2019-2021</h5>
       <p>Full Stack Web Development</p>
       <ul>
-        <li>Full stack: Javascript, HTML, CSS, NodeJS</li>
+        <li>Full stack includes Javascript, HTML, CSS, NodeJS.</li>
         <li>Community led, self-taught web development course.</li>
       </ul>
       <h5>SUFFOLK UNIVERSITY, Boston, MA - 1999 </h5>
