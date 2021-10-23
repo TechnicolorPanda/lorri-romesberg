@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f4010b25.chunk.css",
+    "main.js": "/static/js/main.c1b5d853.chunk.js",
+    "main.js.map": "/static/js/main.c1b5d853.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.773990b3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.773990b3.js.map",
+    "static/js/2.480f413f.chunk.js": "/static/js/2.480f413f.chunk.js",
+    "static/js/2.480f413f.chunk.js.map": "/static/js/2.480f413f.chunk.js.map",
+    "static/js/3.088dd2a7.chunk.js": "/static/js/3.088dd2a7.chunk.js",
+    "static/js/3.088dd2a7.chunk.js.map": "/static/js/3.088dd2a7.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.f4010b25.chunk.css.map": "/static/css/main.f4010b25.chunk.css.map",
+    "static/js/2.480f413f.chunk.js.LICENSE.txt": "/static/js/2.480f413f.chunk.js.LICENSE.txt",
+    "static/media/attack-page.5dd7ff43.png": "/static/media/attack-page.5dd7ff43.png",
+    "static/media/calculator.13bd5037.png": "/static/media/calculator.13bd5037.png",
+    "static/media/odinsOperations.042a129b.png": "/static/media/odinsOperations.042a129b.png",
+    "static/media/profile.713925c2.jpg": "/static/media/profile.713925c2.jpg",
+    "static/media/tictactoe.1279be85.png": "/static/media/tictactoe.1279be85.png",
+    "static/media/weather.80e10673.png": "/static/media/weather.80e10673.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.773990b3.js",
+    "static/js/2.480f413f.chunk.js",
+    "static/css/main.f4010b25.chunk.css",
+    "static/js/main.c1b5d853.chunk.js"
+  ]
+}

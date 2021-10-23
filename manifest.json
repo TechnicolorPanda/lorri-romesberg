@@ -1,0 +1,10 @@
+{
+  "short_name": "Lorri Romesberg",
+  "name": "Lorri Romesberg's Portfolio",
+  "icons": [
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#c9d9c2",
+  "background_color": "#c9d9c2"
+}
