@@ -12,7 +12,7 @@ A basic personal website that highlights my web development skills. This project
 ![image](https://github.com/TechnicolorPanda/lorri-romesberg/blob/main/public/images/home.png?raw=true)
 
 ### Projects Page
-![image](https://github.com/TechnicolorPanda/shopping-cart/blob/main/public/images/projects.png?raw=true)
+![image](https://github.com/TechnicolorPanda/lorri-romesberg/blob/main/public/images/projects.png?raw=true)
 
 ## Objectives & Outcomes
 
