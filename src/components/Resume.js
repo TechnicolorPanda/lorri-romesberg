@@ -6,7 +6,7 @@ const Resume = () => {
 
   return (
     <div id = 'about-info'>
-      <h3 className = 'center-heading'>LORRI ANN ROMESBERG, MSW, JD</h3>
+      <h2>LORRI ANN ROMESBERG, MSW, JD</h2>
       <p className = 'center-paragraph'>
         Attorney, social worker, and self-taught web developer. 
         With the assistance of The Odin Project, experience includes Javascript, HTML, CSS, React, NodeJS, and Express.

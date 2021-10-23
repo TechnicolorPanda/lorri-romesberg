@@ -17,6 +17,9 @@ function Nav() {
       <Link to = '/contact'>
         <li className = 'contact'>Contact</li>
       </Link>
+      <Link to = '/about/resume'>
+        <li className = 'resume'>Resume</li>
+      </Link>
 
       <Link to = '/projects'>
         <li className = 'projects'>Projects</li>
