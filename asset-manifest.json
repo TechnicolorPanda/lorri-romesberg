@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lorri-romesberg/static/css/main.f4010b25.chunk.css",
-    "main.js": "/lorri-romesberg/static/js/main.c1b5d853.chunk.js",
-    "main.js.map": "/lorri-romesberg/static/js/main.c1b5d853.chunk.js.map",
+    "main.js": "/lorri-romesberg/static/js/main.e8c91c4f.chunk.js",
+    "main.js.map": "/lorri-romesberg/static/js/main.e8c91c4f.chunk.js.map",
     "runtime-main.js": "/lorri-romesberg/static/js/runtime-main.cec38a13.js",
     "runtime-main.js.map": "/lorri-romesberg/static/js/runtime-main.cec38a13.js.map",
     "static/js/2.480f413f.chunk.js": "/lorri-romesberg/static/js/2.480f413f.chunk.js",
@@ -16,6 +16,7 @@
     "static/media/calculator.13bd5037.png": "/lorri-romesberg/static/media/calculator.13bd5037.png",
     "static/media/odinsOperations.042a129b.png": "/lorri-romesberg/static/media/odinsOperations.042a129b.png",
     "static/media/profile.713925c2.jpg": "/lorri-romesberg/static/media/profile.713925c2.jpg",
+    "static/media/shopping.4802784a.png": "/lorri-romesberg/static/media/shopping.4802784a.png",
     "static/media/tictactoe.1279be85.png": "/lorri-romesberg/static/media/tictactoe.1279be85.png",
     "static/media/weather.80e10673.png": "/lorri-romesberg/static/media/weather.80e10673.png"
   },
@@ -23,6 +24,6 @@
     "static/js/runtime-main.cec38a13.js",
     "static/js/2.480f413f.chunk.js",
     "static/css/main.f4010b25.chunk.css",
-    "static/js/main.c1b5d853.chunk.js"
+    "static/js/main.e8c91c4f.chunk.js"
   ]
 }
