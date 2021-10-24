@@ -4,10 +4,9 @@ import tictactoe from '../assets/tictactoe.png';
 import weather from '../assets/weather.png';
 import odinsOperations from '../assets/odinsOperations.png';
 import calculator from '../assets/calculator.png';
+import shopping from '../assets/shopping.png';
 
 const ProjectInfo = {
-
-  // TODO: make image sizes uniform
 
   project: [{
       name: 'Battleship', 
@@ -48,6 +47,14 @@ const ProjectInfo = {
       githubURL: 'https://github.com/TechnicolorPanda/calculator',
       liveDemo: 'https://technicolorpanda.github.io/calculator/',
       id: 2345,
+    },
+    {
+      name: 'Shopping Site',
+      images: shopping,
+      description: 'A basic e-commerce site',
+      githubURL: 'https://github.com/TechnicolorPanda/shopping-cart',
+      liveDemo: 'https://technicolorpanda.github.io/shopping-cart/',
+      id: 8129,
     }
   ]
 }

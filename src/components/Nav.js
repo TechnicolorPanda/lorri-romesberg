@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/nav.css';
 import { Link } from 'react-router-dom';
 import profile from '../assets/profile.jpg';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Nav() {
 
