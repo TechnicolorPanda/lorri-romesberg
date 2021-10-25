@@ -5,7 +5,6 @@ import projectInfo from './projectInfo';
 
 const Projects = () => {
 
-  // Defines states.
   const [projectDetails, setProjectDetails] = useState({
     name: '', 
     images: '', 
@@ -80,7 +79,7 @@ const Projects = () => {
 
   return (
     <div className = 'main-container'>
-      <h2>Projects</h2>
+      <h2 className = 'title'>Projects</h2>
       <div className = 'slide' key = {projectDetails.id}>
         <p className = 'previous' onClick = {moveBack}>{String.fromCharCode(10094)}</p>
         <img className = 'projectImage' src={projectDetails.images} alt={projectDetails.description}></img>

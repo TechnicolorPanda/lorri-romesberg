@@ -1,5 +1,5 @@
 
-h2 {
+h2.title {
     font-family: "Volkhov",serif;
     color: #1b494b;
     text-align: left;
@@ -8,19 +8,13 @@ h2 {
     text-align: center;
 }
 
-img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-}
-
 .projectImage {
+  width: 100%;
   height: auto;
   margin-bottom: 12px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .slide, .image-info {
@@ -30,10 +24,8 @@ img {
     display: block;
     text-align: center;
     align-items: center;
-    border: 3px black;
     width: 40%;
     height: 40%;
-    object-fit: cover;
 }
 
 /* The dots/bullets/indicators */
@@ -63,58 +55,50 @@ img {
 
 /* Creates advancement arrows. */
 
-  .previous, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    color: black;
-    font-weight: bold;
-    font-size: 2em;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+.previous, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 38%;
+  width: auto;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 2em;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
 
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-    margin-right: -10%;
-  }
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  margin-right: -10%;
+}
 
-  .previous {
-    left: 0;
-    border-radius: 3px 0 0 3px;
-    margin-left: -10%;
-  }
+.previous {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  margin-left: -10%;
+}
 
-  /* On hover, add a black background color with a little bit see-through. */
+/* On hover, add a black background color with a little bit see-through. */
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.185);
-  }
+  background-color: rgba(0, 0, 0, 0.185);
+}
 
-  .content {
-    margin-left: 10%;
-    margin-right:10%;
-    width: 80%;
-    align-items: center;
-    font-size: 16px;
-    color: black;
-    position: auto;
-    justify-content: space-evenly;
-    border: 10px;
-    border-radius: 1%;
-    display: block;
-  }
-
-  box {
-      position: absolute;
-      top: 80%;
-      margin-left: 42%;
-      align-items: center;
-      display: block;
+.content {
+  margin-left: 10%;
+  margin-right:10%;
+  width: 80%;
+  align-items: center;
+  font-size: 16px;
+  color: black;
+  position: auto;
+  justify-content: space-evenly;
+  border: 10px;
+  border-radius: 1%;
+  display: block;
 }
 
 a.list-name {

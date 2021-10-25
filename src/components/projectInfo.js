@@ -41,14 +41,6 @@ const ProjectInfo = {
       id: 7683,
     },
     {
-      name: 'Calculator',
-      images: calculator,
-      description: 'A basic calculator',
-      githubURL: 'https://github.com/TechnicolorPanda/calculator',
-      liveDemo: 'https://technicolorpanda.github.io/calculator/',
-      id: 2345,
-    },
-    {
       name: 'Shopping Site',
       images: shopping,
       description: 'A basic e-commerce site',
