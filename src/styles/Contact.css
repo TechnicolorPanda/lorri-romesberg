@@ -1,5 +1,11 @@
 
 h2.contact-heading {
+  font-family: "Volkhov",serif;
+  color: #1b494b;
+  text-align: left;
+  font-size: 3em;
+  margin-top: 1em;
+  text-align: center;
   margin-bottom: .5em;
 }
 
